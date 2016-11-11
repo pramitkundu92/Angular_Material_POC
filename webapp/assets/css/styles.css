@@ -1,0 +1,58 @@
+body {
+    background-color: #c5c5c5;
+    color: #444444;
+    font-size: 14px;
+}
+md-content {
+    background-color: inherit;
+}
+.login-space {
+    margin-top: 25px;
+}
+.fixed {
+    position: fixed;
+}
+md-card {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12);
+}
+md-card:hover {
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,.2),0 12px 17px 2px rgba(0,0,0,.14),0 5px 22px 4px rgba(0,0,0,.12);
+}
+md-card md-card-content {
+    padding: 16px;
+}
+md-option {
+    height: 30px;
+}
+.md-button {
+    min-height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+md-input-container .md-placeholder, md-input-container label:not(.md-no-float):not(.md-container-ignore),
+md-input-container .md-input {
+    font-size: 14px;
+}
+.container {
+    min-width: 400px;  
+}
+.login-error {
+    text-align: center;
+    padding-top: 15px;
+    background-color: #ee0000;
+    opacity: 0.5;
+    color: white;
+    border: 1px solid #ee0000;
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.project-selection-actions {
+    margin-bottom:10px;
+}
+.header-info {
+    font-size: 12px;
+}
+.home-tabs md-tabs.md-default-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]), md-tabs.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,44 @@
+.tree-node {
+  background-color: inherit;
+  cursor: pointer;
+  transition: 0.4s;    
+}
+.tree-node:hover {
+  background-color: #ddd;
+}
+.tree-icon {
+  cursor: pointer;
+  margin: 0 5px;
+  top: 2px;
+}
+.leaf-node {
+  margin: 5px 0 5px 24px;
+}
+.non-leaf-node {
+  margin: 5px 0;
+}
+.child-nodes {
+  margin-left: 13px; 
+  opacity: 1;
+  max-height: 100%; 
+  animation: fadein 1s ease-in-out;    
+}
+@keyframes fadein{
+    0% {opacity: 0}
+    25% {opacity: 0.25}
+    50% {opacity: 0.5}
+    75% {opacity: 0.75}
+    100% {opacity: 1}
+}
+.tree-container {
+  width: 560px;
+  overflow-x: scroll; 
+  overflow-y: hidden;    
+}
+.panel-heading {
+  padding: 0px !important;
+  margin: 3px !important;    
+}
+.edit-node {
+  margin-left: 24px;
+}

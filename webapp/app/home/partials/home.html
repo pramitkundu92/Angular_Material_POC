@@ -1,0 +1,9 @@
+<md-tabs md-stretch-tabs="auto" md-dynamic-height md-border-bottom 
+         class="md-primary home-tabs" md-selected="selectedIndex">
+    <md-tab ng-repeat="tab in tabs" label="{{tab.title}}" 
+            ui-sref="{{tab.state}}">
+        <md-content>
+            <ui-view></ui-view>
+        </md-content>
+    </md-tab>
+</md-tabs>

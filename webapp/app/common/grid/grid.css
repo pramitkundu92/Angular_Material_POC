@@ -1,0 +1,22 @@
+table.custom-grid {
+    border-spacing: 5px;
+    border-collapse: collapse;
+} 
+table.custom-grid tr th, table.custom-grid tr td {
+    color: #333;
+    font-size: 11px;
+    text-align: center;
+    padding: 7px;
+}
+table.custom-grid tr {
+    height: 25px;
+}
+table.custom-grid thead tr {
+    border-bottom: 1px solid rgba(0,0,0,0.22);
+}
+.pagination span {
+    font-size: 12px;
+}
+table.custom-grid thead tr td input {
+    width: 60px;
+}

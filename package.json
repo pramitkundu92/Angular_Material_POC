@@ -1,0 +1,10 @@
+{
+    "name": "DPDX_MD",
+    "version": "0.0.1",
+    "description": "Deloitte Product Data X-Ray",
+    "main": "server.js",
+    "author": "Pramit - DX Studio",
+    "dependencies": { 
+        "express": "^4.14.0"
+    }  
+}

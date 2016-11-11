@@ -1,0 +1,24 @@
+<div class="layout-row layout-align-center-center login-space">
+    <div class="container">
+        <md-card>
+            <md-card-header>
+                <md-card-header-text>Project Selection</md-card-header-text>
+            </md-card-header>
+            <md-card-content class="layout-row layout-align-center-center">
+                <md-input-container>
+                    <label>Select a project</label>
+                    <md-select ng-model="selectedProject" aria-label="select-project">
+                        <md-option ng-repeat="project in projectList" value="{{project.name}}">{{project.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </md-card-content>
+            <md-card-actions>
+                <div class="layout-row layout-align-center-center project-selection-actions">
+                    <md-button class="md-button md-raised md-primary" ng-click="selectProject()" ng-disabled="selectedProject.length==0">
+                        Submit
+                    </md-button>
+                </div>       
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

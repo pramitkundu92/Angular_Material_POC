@@ -1,0 +1,32 @@
+<div class="layout-row layout-align-center-center login-space">
+    <div class="container">
+        <div ng-if="invalidLogin" class="login-error">
+            Invalid Username/Password. Please try again.    
+        </div>
+        <md-card>
+            <md-card-content>
+                <md-tabs md-stretch-tabs="auto" md-dynamic-height md-border-bottom>
+                    <md-tab ng-repeat="opt in loginOptions" label="{{opt.title}}" ng-click="resetLogin()">
+                        <md-content class="md-padding">
+                            <form name="loginForm" class="layout-column">
+                                <md-input-container ng-repeat="field in opt.fields">
+                                    <label>{{field.label}}</label>
+                                    <input ng-model="userData[field.attribute]" 
+                                           type="{{field.type}}" ng-required="field.required"/>
+                                </md-input-container>
+                                <div class="layout-row layout-align-center-center">
+                                    <md-button class="md-button md-raised md-primary" ng-click="performAction(opt.action)">
+                                        {{opt.title}}
+                                    </md-button>
+                                    <md-button class="md-button md-raised" ng-click="clear()">
+                                        Clear
+                                    </md-button>
+                                </div>    
+                            </form>
+                        </md-content>                    
+                    </md-tab>
+                </md-tabs>
+            </md-card-content>
+        </md-card>
+    </div>    
+</div>

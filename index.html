@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>DPDX in Angular Material</title>
+        
+        <!--vendor dependencies-->
+        <link rel="stylesheet" href="vendor/css/angular-material.min.css"/>
+        <link rel="stylesheet" href="vendor/css/material-icons.css"/>
+        <!--app dependencies-->
+        <link rel="stylesheet" href="assets/css/styles.css"/>
+        <link rel="stylesheet" href="app/common/grid/grid.css"/>
+        <link rel="stylesheet" href="app/common/tree/tree.css"/>
+    </head>
+    <body ng-app="dpdx">        
+        <md-toolbar class="topbar" id="topbar">
+            <div class="md-toolbar-tools flex">
+                <div class="flex-75">
+                    <img src="assets/images/DPDX-brand.png" height="50" width="100"/>
+                </div>
+                <div ng-if="$root.dpdxDetails!=undefined" class="header-info flex-25">
+                    Logged in as: 
+                    <span>{{$root.dpdxDetails.user}}</span> 
+                    / 
+                    <span>{{$root.dpdxDetails.project}}</span> 
+                    | 
+                    <a ui-sref="login">Logout</a>
+                </div>
+            </div>
+        </md-toolbar>
+        
+        <md-content role="main" flex md-scroll-y>
+            <ui-view></ui-view>
+        </md-content>
+        
+        <!--vendor dependencies-->
+        <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/js/angular.min.js"></script>
+        <script type="text/javascript" src="vendor/js/angular-ui-router.js"></script>
+        <script type="text/javascript" src="vendor/js/angular-animate.min.js"></script>
+        <script type="text/javascript" src="vendor/js/angular-aria.min.js"></script>
+        <script type="text/javascript" src="vendor/js/angular-material.min.js"></script>
+        <script type="text/javascript" src="vendor/js/angular-messages.min.js"></script>
+        <!--app dependencies-->
+        <script type="text/javascript" src="app/grid-data.js"></script>
+        <script type="text/javascript" src="app/tree-data.js"></script>
+        <script type="text/javascript" src="app/states.js"></script>
+        <script type="text/javascript" src="app/common/grid/grid.js"></script>
+        <script type="text/javascript" src="app/common/tree/tree.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/login/login.js"></script>
+        <script type="text/javascript" src="app/select-project/project.js"></script>
+        <script type="text/javascript" src="app/home/home.js"></script>
+        <script type="text/javascript" src="app/source-data/source-data.js"></script>
+        <script type="text/javascript" src="app/conversion/conversion.js"></script>
+    </body>
+</html>

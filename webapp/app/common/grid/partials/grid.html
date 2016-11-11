@@ -1,0 +1,48 @@
+<div class="flex">
+    <table class="custom-grid layout-fill">
+        <thead>
+            <tr>
+                <th ng-repeat="column in tableDef" ng-if="$index<gridOptions.initialColumnCount">
+                    {{column.text}}
+                </th>
+            </tr>
+            <tr ng-if="gridOptions.filters">
+                <td ng-repeat="column in tableDef" ng-if="$index<gridOptions.initialColumnCount">
+                    <input type="text" ng-model="filterConfig[column.text]"/>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="entity in paginatedData">
+                <td ng-repeat="column in tableDef" ng-if="$index<gridOptions.initialColumnCount">
+                    <span>{{getDisplayText(entity[column.text])}}</span>
+                    <md-tooltip md-direction="top" ng-if="entity[column.text].length>15">{{entity[column.text]}}</md-tooltip>
+                </td>
+            </tr>
+            <tr ng-repeat-end>
+                <td colspan="{{gridOptions.initialColumnCount}}">
+                    <md-divider ng-if="!$last"></md-divider>
+                </td>    
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination layout-row layout-align-center-center" ng-if="tableData.length>gridOptions.pagination.pageSize">
+        <md-button class="md-icon-button" ng-disabled="gridOptions.pagination.currentPage==1" 
+                   ng-click="gridOptions.pagination.currentPage=1">
+            <md-icon>first_page</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" ng-disabled="gridOptions.pagination.currentPage==1" 
+                   ng-click="gridOptions.pagination.currentPage=gridOptions.pagination.currentPage-1">
+            <md-icon>chevron_left</md-icon>
+        </md-button>
+        <span>Current Page: {{gridOptions.pagination.currentPage}} of {{gridOptions.pagination.maxPages}}</span>
+        <md-button class="md-icon-button" ng-disabled="gridOptions.pagination.currentPage==gridOptions.pagination.maxPages"
+                   ng-click="gridOptions.pagination.currentPage=gridOptions.pagination.currentPage+1">
+            <md-icon>chevron_right</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" ng-disabled="gridOptions.pagination.currentPage==gridOptions.pagination.maxPages"
+                   ng-click="gridOptions.pagination.currentPage=gridOptions.pagination.maxPages">
+            <md-icon>last_page</md-icon>
+        </md-button>
+    </div>
+</div>
